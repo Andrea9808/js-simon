@@ -17,7 +17,7 @@ const buttonUtente = document.getElementById("buttonutente");
 let clock;
 
 //creo un ciclo dove i<5 dato che deve stampare 5 numeri
-for(i = 0; i < 5; i++){
+for(let i = 0; i < 5; i++){
 
     //creo numeri randomici da 1 a 100
     const numRandom = randomNum(1,100);
@@ -32,12 +32,6 @@ for(i = 0; i < 5; i++){
     numeri.append(altriNumeri);    
 
 }
-
-
-
-
-
-
 
 
 //funzione numeri random
@@ -60,5 +54,20 @@ clock = setTimeout(
 
         clearInterval(clock);
 
-    }, 30000 
+    }, 1000
 );     
+
+
+buttonUtente.addEventListener("click",
+
+    function () {
+        
+
+         //verifico l'inserimento di 5 numeri
+        if (numeriInseriti.length !== 5) {
+
+            alert("Inserisci 5 numeri.");
+            
+        }
+    }
+)
