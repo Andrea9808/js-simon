@@ -5,9 +5,14 @@
 //Dopo che sono stati inseriti i 5 numeri, 
 //il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
+//dichiaro il div
 const numeri = document.getElementById("randomnum");
 
-const numeriCasuali = [];
+//dichiaro l'input
+const inputUtente = document.getElementById("inputUtente");
+
+//dichiaro il bottone
+const buttonUtente = document.getElementById("buttonutente");
 
 let clock;
 
@@ -16,9 +21,6 @@ for(i = 0; i < 5; i++){
 
     //creo numeri randomici da 1 a 100
     const numRandom = randomNum(1,100);
-
-    //inserisce il numero casuale all'array
-    numeriCasuali.push(numRandom);
 
     //creo un nuovo elemento
     const altriNumeri = document.createElement("p");
@@ -44,16 +46,18 @@ function randomNum(min, max) {
 }
 
 
-//creao timer di 30s
-clock = setInterval(
+//creato timer di 30s
+clock = setTimeout(
 
     function() {
 
-        // chiedo all'utente di inserire i numeri
-        const inputUtente = prompt("Inserisci i numeri che hai visto");
+        // rimuove i numeri dopo i 30s
+        numeri.innerHTML = "";
 
-        console.log(inputUtente);
-    
+        // mostro l'input e il bottone per l'utente dopo 30s
+        inputUtente.style.display = "block";
+        buttonUtente.style.display = "block";
+
         clearInterval(clock);
 
     }, 30000 
