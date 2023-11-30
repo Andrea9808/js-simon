@@ -1,9 +1,56 @@
-
-#inputUtente{
-    display: none;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-#buttonutente{
-    display: none;
+h1 {
+    color: #333;
+}
+
+#randomnum {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p {
+    margin: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+#inputUtente {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#buttonutente {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buttonutente:hover {
+    background-color: #005680;
+}
+
+#output {
     margin-top: 20px;
+    font-size: 18px;
+    color: #333;
 }
